@@ -1,0 +1,36 @@
+@import '../../styles/mixins.scss';
+
+.switch-locale {
+    font-family: 'Caveat';
+    font-size: 28px;
+    color: #B0B0B0;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    width: 59px;
+    height: 66px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-mobile {
+        width: 38px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    &:after {
+        position: absolute;
+        content: url("../../assets/images/circle.svg");
+        top: 4px;
+        left: 4px;
+
+        @include respond-mobile {
+            content: url("../../assets/images/circle-mobile.svg");
+            top: 3px;
+            left: 2px;
+        }
+    }
+}

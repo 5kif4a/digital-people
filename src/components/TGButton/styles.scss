@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .tg-button {
     font-family: 'Caveat';
     font-weight: 700;
@@ -7,14 +9,26 @@
     color: #232323;
     display: inline-block;
     position: relative;
-    margin-left: 72px;
-    margin-top: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 274px;
+
+    @include respond-mobile {
+        width: 100%;
+        font-size: 36px;
+        line-height: 1.57em;
+    }
 
     &:after {
         position: absolute;
         top: -50%;
-        left: -40%;
         content: url("../../assets/images/shape.svg");
         transform: rotate(3deg);
+
+        @include respond-mobile {
+            transform: scale(0.8); 
+        }
     }
 }

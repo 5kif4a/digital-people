@@ -1,0 +1,7 @@
+@import './variables.scss';
+
+@mixin respond-mobile {
+    @media (max-width: $mobile-breakproint) {
+        @content
+    }
+}

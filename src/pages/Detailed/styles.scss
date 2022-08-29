@@ -1,0 +1,58 @@
+@import '../../styles/mixins.scss';
+
+.detailed {
+    color: #232323;
+
+    &__content {
+        height: calc(100% - 160px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 80px;
+        position: relative;
+
+        @include respond-mobile {
+            padding: 32px;
+            height: calc(100% - 64px);
+        }
+    }
+
+    &__switch-locale-wrapper {
+        position: absolute;
+        top: 80px;
+        right: 80px;
+
+        @include respond-mobile {
+            top: 32px;
+            right: 32px;
+        }
+    }
+}
+
+.grid {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include respond-mobile {
+        margin-top: 100px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 36px;
+    }
+}
+
+.btn {
+    margin-top: 100px;
+    flex-basis: 33.333333%;
+    min-height: 420px;
+    margin-bottom: 120px;
+
+    @include respond-mobile {
+        flex-basis: 100%;
+        min-height: unset;
+        margin-bottom: 28px;
+        margin-top: 64px;
+    }
+}

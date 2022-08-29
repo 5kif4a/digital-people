@@ -1,0 +1,41 @@
+@import '../../styles/mixins.scss';
+
+.loading-screen {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__img {
+        background-image: url('../../assets/images/logo.png');
+        width: 64px;
+        height: 113px;
+
+        @include respond-mobile {
+            background-image: url('../../assets/images/logo-mobile.png');
+            width: 42px;
+            height: 74px;
+        }
+    }
+
+    &__brand {
+        font-weight: 500;
+        font-size: 65px;
+        line-height: 63px;
+        color: #232323;
+        width: 240px;
+
+        @include respond-mobile {
+            font-size: 43px;
+            line-height: 42px;
+            width: 156px;
+        }
+    }
+}

@@ -25,7 +25,7 @@ const Detailed = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="detailed">
+    <div className="detailed animate__animated animate__fadeIn">
       <div className="detailed__content">
         <Logo />
 

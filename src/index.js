@@ -1,15 +1,21 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
 import "./styles/index.scss";
-import './i18n';
+import "./i18n";
+import "animate.css";
+import Loading from "./pages/Loading";
+
+const App = lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("./App")), 1500);
+  });
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Suspense fallback={<Loading />}>
       <App />
-    </BrowserRouter>
+    </Suspense>
   </React.StrictMode>
 );

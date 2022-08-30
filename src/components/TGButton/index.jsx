@@ -7,7 +7,7 @@ const TGButton = ({ text }) => {
       className="tg-button"
       href="https://t.me/digitalppl"
       target="_blank"
-      rel="norefferer noopener"
+      rel="noopener noreferrer"
     >
       {text}
     </a>

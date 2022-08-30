@@ -1,8 +1,7 @@
 import React, { useId } from "react";
 import { useTranslation } from "react-i18next";
-import Logo from "../../components/Logo";
+import Header from "../../components/Header";
 import Section from "../../components/Section";
-import SwitchLocale from "../../components/SwitchLocale";
 import TGButton from "../../components/TGButton";
 import "./styles.scss";
 
@@ -27,11 +26,7 @@ const Detailed = () => {
   return (
     <div className="detailed animate__animated animate__fadeIn">
       <div className="detailed__content">
-        <Logo />
-
-        <div className="detailed__switch-locale-wrapper">
-          <SwitchLocale />
-        </div>
+        <Header />
 
         <div className="grid">
           {sections.map((section, index) => (

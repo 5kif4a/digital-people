@@ -4,4 +4,8 @@
 body {
     font-family: 'Neue Machina';
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: #232323;
 }

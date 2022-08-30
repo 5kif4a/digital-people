@@ -1,11 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Logo from "../../components/Logo";
-import SwitchLocale from "../../components/SwitchLocale";
 import TGButton from "../../components/TGButton";
 import "./styles.scss";
-import { Link } from 'react-router-dom'
-
+import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 const Main = () => {
   const { t, i18n } = useTranslation();
@@ -13,11 +11,7 @@ const Main = () => {
   return (
     <div className="main animate__animated animate__fadeIn">
       <div className="main__content">
-        <Logo />
-
-        <div className="main__switch-locale-wrapper">
-          <SwitchLocale />
-        </div>
+        <Header />
 
         <div className="text">
           <p dangerouslySetInnerHTML={{ __html: t("main_page_text") }} />

@@ -2,37 +2,24 @@
 
 .main {
     height: 100vh;
+    padding: 80px;
 
     &__content {
-        height: calc(100% - 160px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 80px;
+        height: 100%;
         position: relative;
-
-        @include respond-mobile {
-            padding: 32px;
-            height: calc(100% - 64px);
-            height: auto;
-        }
     }
 
-    &__switch-locale-wrapper {
-        position: absolute;
-        top: 80px;
-        right: 80px;
-
-        @include respond-mobile {
-            top: 32px;
-            right: 32px;
-        }
+    @include respond-mobile {
+        padding: 32px;
+        height: auto;
     }
 }
 
 .text {
     width: calc(100% - 36px);
-    margin-top: 170px;
 
     color: #232323;
 
@@ -42,7 +29,7 @@
 
     p {
         font-weight: 500;
-        font-size: 44px;
+        font-size: 2.9vw;
         line-height: 1.5em;
         display: inline;
         text-transform: uppercase;
@@ -82,7 +69,6 @@
     font-size: 24px;
     text-transform: uppercase;
     color: #606060;
-    margin-top: 104px;
 
     @include respond-mobile {
         font-size: 16px;

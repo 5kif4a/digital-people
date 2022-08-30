@@ -13,7 +13,7 @@ const SwitchLocale = () => {
 
   return (
     <button className="switch-locale" onClick={handleClick}>
-      {language}
+      {language === 'ru' ? 'en' : 'ru'}
     </button>
   );
 };

@@ -72,6 +72,10 @@
     bottom: 0;
     left: 0;
 
+    &_wrapper {
+        position: relative;
+    }
+
     @include respond-small {
         font-size: 1.8vh;
         line-height: 1.5em;

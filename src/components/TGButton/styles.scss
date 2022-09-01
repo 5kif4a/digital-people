@@ -3,32 +3,33 @@
 .tg-button {
     font-family: 'Caveat';
     font-weight: 700;
-    font-size: 44px;
-    line-height: 1.28em;
+    font-size: inherit;
+    line-height: inherit;
     text-transform: uppercase;
     color: #232323;
-    display: inline-block;
-    position: relative;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 274px;
+    position: relative;
 
-    @include respond-mobile {
-        width: 100%;
-        font-size: 36px;
-        line-height: 1.57em;
+    &:hover .underline__path {
+        stroke-dashoffset: 0;
     }
+}
 
-    &:after {
-        position: absolute;
-        top: -50%;
-        content: url("../../assets/images/shape.svg");
-        transform: rotate(3deg);
+.underline {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+
+    &__path {
+        width: 100%;
+        transition: stroke-dashoffset .3s;
 
         @include respond-mobile {
-            transform: scale(0.8); 
+            stroke-dashoffset: 0;
         }
     }
 }

@@ -4,4 +4,16 @@
     @media (max-width: $mobile-breakproint) {
         @content
     }
-}
+};
+
+@mixin respond-medium {
+    @media (max-width: $medium-breakproint) {
+        @content
+    }
+};
+
+@mixin respond-small {
+    @media (max-width: $small-breakproint) {
+        @content
+    }
+};

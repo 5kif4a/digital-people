@@ -1,27 +1,28 @@
 @import '../../styles/mixins.scss';
 
 .main {
-    height: 100vh;
-    padding: 80px;
+    padding: 0 80px 80px 80px;
+    height: calc(100% - 226px);
 
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
+        justify-content: center;
         position: relative;
+        height: 100%;
     }
 
     @include respond-mobile {
-        padding: 32px;
-        height: auto;
+        padding: 0 32px 32px 32px;
+        height: calc(100% - 76px);
     }
 }
 
 .text {
     width: calc(100% - 36px);
-
     color: #232323;
+    font-size: 2.5vw;
+    line-height: 1.5;
 
     @include respond-mobile {
         display: none;
@@ -29,38 +30,36 @@
 
     p {
         font-weight: 500;
-        font-size: 2.9vw;
-        line-height: 1.5em;
         display: inline;
         text-transform: uppercase;
     }
 
-    &__btn {
-        display: inline-block;
-        margin-left: 36px;
-        margin-top: 16px;
-    }
-
     &_mobile {
         display: none;
+        width: calc(100% - 48px);
 
         p {
             font-weight: 500;
-            font-size: 24px;
+            font-size: 2.3vh;
             line-height: 1.5em;
             display: inline;
             text-transform: uppercase;
         }
 
         &__btn {
-            display: block;
-            margin-top: 56px;
+            display: none;
+            font-size: 36px;
+            margin-top: 80px;
+            text-align: center;
+            position: relative;
+
+            @include respond-mobile {
+                display: block;
+            }
         }
 
         @include respond-mobile {
             display: block;
-            margin-top: 104px;
-            margin-bottom: 56px;
         }
     }
 }
@@ -69,10 +68,12 @@
     font-size: 24px;
     text-transform: uppercase;
     color: #606060;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-    @include respond-mobile {
-        font-size: 16px;
-        margin-top: 0;
+    @include respond-small {
+        font-size: 1.8vh;
         line-height: 1.5em;
     }
 }
@@ -83,15 +84,19 @@
     text-decoration: none;
     position: relative;
 
-    &::after {
-        position: absolute;
-        content: url('../../assets/images/underline.svg');
-        bottom: -12px;
-        left: 50%;
-        transform: translateX(-50%);
+    &:hover &__underline__path {
+        stroke-dashoffset: 0;
+    }
 
-        @include respond-mobile {
-            content: url('../../assets/images/underline-mobile.svg');
+    &__underline {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+
+        &__path {
+            width: 100%;
+            transition: stroke-dashoffset .3s;
         }
     }
 }

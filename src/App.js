@@ -4,11 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
 import Detailed from "./pages/Detailed";
 import ScrollToTop from "./components/ScrollToTop";
+import Header from "./components/Header";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop>
+        <Header />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="detailed" element={<Detailed />} />

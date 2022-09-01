@@ -4,6 +4,16 @@
     flex-basis: calc(33.333333% - 24px);
     margin-bottom: 96px;
     text-transform: uppercase;
+    animation-duration: .4s;
+    animation-name: fadeInUp;
+
+    @include respond-medium {
+        flex-basis: calc(50% - 24px);
+    }
+
+    @include respond-small {
+        flex-basis: 100%;
+    }
 
     @include respond-mobile {
         margin-bottom: 0;
@@ -14,6 +24,10 @@
         font-weight: 700;
         font-size: 40px;
         min-height: 40px;
+
+        &_no_min_height {
+            min-height: unset;
+        }
 
         @include respond-mobile {
             font-size: 24px;
@@ -26,6 +40,15 @@
         margin-top: 60px;
         font-size: 18px;
         line-height: 2em;
+        max-width: 340px;
+
+        @include respond-medium {
+            max-width: unset;
+        }
+
+        &_no_margin {
+            margin-top: 0;
+        }
 
         b {
             font-weight: bold;

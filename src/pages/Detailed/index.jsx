@@ -1,6 +1,5 @@
 import React, { useId } from "react";
 import { useTranslation } from "react-i18next";
-import Header from "../../components/Header";
 import Section from "../../components/Section";
 import TGButton from "../../components/TGButton";
 import "./styles.scss";
@@ -24,19 +23,19 @@ const Detailed = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="detailed animate__animated animate__fadeIn">
+    <div className="detailed">
       <div className="detailed__content">
-        <Header />
-
         <div className="grid">
           {sections.map((section, index) => (
             <Section
               key={`${prefix}-${index}`}
               title={t(section.title)}
               text={t(section.text)}
+              titleNoMinHeight={index > 5}
+              noTextMargin={index > 5}
+              delay={index * 50}
             />
           ))}
-
           <div className="btn">
             <TGButton text={t("letsgo")} />
           </div>

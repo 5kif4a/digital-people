@@ -10,6 +10,8 @@ const Main = () => {
   return (
     <div className="main animate__animated animate__fadeIn">
       <div className="main__content">
+        <div></div>
+        
         <div className="text">
           <p dangerouslySetInnerHTML={{ __html: t("main_page_text") }} />
           <TGButton text={t("telegram")} />
@@ -23,6 +25,7 @@ const Main = () => {
           <TGButton text={t("telegram")} disableUnderline />
         </div>
 
+        <div className="info_wrapper">
         <div className="info">
           {i18n.language === "ru" ? (
             <>
@@ -78,6 +81,7 @@ const Main = () => {
               </Link>
             </>
           )}
+          </div>
         </div>
       </div>
     </div>

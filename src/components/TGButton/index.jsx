@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 
-const TGButton = ({ text, disableUnderline }) => {
+const TGButton = ({ text }) => {
   return (
     <a
       className={"tg-button"}

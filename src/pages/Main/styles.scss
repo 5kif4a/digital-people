@@ -2,7 +2,7 @@
 
 .main {
     padding: 0 80px 80px 80px;
-    height: calc(100% - 226px);
+    height: calc(100% - 146px);
 
     &__content {
         display: flex;
@@ -18,12 +18,21 @@
     }
 }
 
+.spacer {
+    flex-grow: 1;
+
+    @include respond-mobile {
+        flex-grow: unset;
+    }
+}
+
 .text {
     width: calc(100% - 36px);
     color: #232323;
     font-size: 2.5vw;
     line-height: 1.5;
     padding: 64px 0;
+    flex-grow: 3;
 
     @include respond-mobile {
         display: none;
@@ -64,6 +73,10 @@
     }
 }
 
+.info_wrapper {
+    position: relative;
+}
+
 .info {
     font-size: 24px;
     text-transform: uppercase;
@@ -71,10 +84,6 @@
     position: absolute;
     bottom: 0;
     left: 0;
-
-    &_wrapper {
-        position: relative;
-    }
 
     @include respond-small {
         font-size: 1.8vh;

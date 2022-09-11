@@ -21,12 +21,12 @@ const TGButton = ({ text }) => {
         <path
           className="underline__path"
           d="M1,6 Q131.890625,-3 262.78125,3"
-          stroke-width="2"
+          strokeWidth="2"
           stroke="black"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-dasharray="263.78125"
-          stroke-dashoffset="263.78125"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray="263.78125"
+          strokeDashoffset="263.78125"
         ></path>
       </svg>
     </a>

@@ -18,10 +18,7 @@ const Main = () => {
 
         <div className="text_mobile">
           <p dangerouslySetInnerHTML={{ __html: t("main_page_text_mobile") }} />
-        </div>
-
-        <div className="text_mobile__btn">
-          <TGButton text={t("channel")} disableUnderline />
+          <TGButton text={t("channel")} />
         </div>
 
         <div className="info_wrapper">

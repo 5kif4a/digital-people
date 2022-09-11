@@ -47,6 +47,7 @@
     &_mobile {
         display: none;
         width: calc(100% - 48px);
+        font-size: 2.3vh;
 
         p {
             font-weight: 500;
@@ -54,17 +55,6 @@
             line-height: 1.5em;
             display: inline;
             text-transform: uppercase;
-        }
-
-        &__btn {
-            display: none;
-            font-size: 36px;
-            text-align: center;
-            position: relative;
-
-            @include respond-mobile {
-                display: block;
-            }
         }
 
         @include respond-mobile {
